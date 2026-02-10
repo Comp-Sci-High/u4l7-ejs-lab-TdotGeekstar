@@ -26,10 +26,10 @@
       <!-- You should use the values from data to dynamically populate the image, item name, cost, and path -->
       
       <div class="item-card">
-        <img src="..." />
-        <h3>...</h3>
-        <p>$...</p>
-        <a href="...">More info</a>
+        <img src="<%= inventory[0].items[0].imageUrl %> " />
+        <h3> <%= inventory[0].category %> </h3>
+        <p>$ <%= inventory[0].items[0].cost %> </p>
+        <a href=" <%= inventory[0].items[0].path %> ">More info</a>
       </div>
 
     </div>

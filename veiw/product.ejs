@@ -20,26 +20,27 @@
 
     <div>
         <!-- Use the name attribute to set the h2 -->
-        <h2 class="center">...</h2>
+        <h2 class="center"> <%= inventory[0].items[0].name %> </h2>
         <!-- Use the imageUrl attribute to fix the image -->
-        <img src="..." class="main-image">
+        <img src="<%= inventory[0].items[0].imageUrl %>" class="main-image">
         <div class="color-options">
           <!-- PINK ONLY: Iterate over the colors array to make a color-option div for each color. Plug in the color into the background-color slot. -->
 
             <div class="color-option" style="background-color: ...;"></div>
 
         </div>
-        <!-- Use the cost attribute to set the p tag -->
-        <p class="center">$...</p>
+        <!-- Us=e the cost attribute to set the p tag -->
+        <p class="center">$ <%= inventory[0].items</p>
 
         <!-- Use conditions to show the first button if the quantity is over 0. Otherwise, show the Sold Out button. -->
 
            <!-- Extra credit: Add JS such that when the Buy Now button is clicked, you add HTML underneath it that says "Added to cart" (review DOM manipulation!) -->
-
-          <button class="buy-now-button center">Buy Now</button>
         
-          <button class="buy-now-button" disabled>Sold Out</button>
-      
+          <% if (inventory[0].items[0].quantity > 0) { %>
+                <button class="buy-now-button center" id="buyBtn">Buy Now</button>
+            <% } else { %>
+                <button class="buy-now-button" disabled>Sold Out</button>
+          <% } %>
   
     </div>
 
